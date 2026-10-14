@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javier Garcia · IamYipi</title>
+  <meta name="description" content="Javier Garcia (IamYipi): investigador en ciberseguridad e IA en BISITE, Universidad de Salamanca. Proyectos, lenguajes y contribuciones open source.">
+  <meta name="theme-color" content="#07100c">
+  <meta property="og:title" content="Javier Garcia · IamYipi">
+  <meta property="og:description" content="Investigador en ciberseguridad e IA. Proyectos de I+D, lenguajes y contribuciones open source.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/93437997?v=4">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#player" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="hud" id="hud">
+    <a class="hud-player" href="#top" aria-label="IamYipi">1P <span id="hud-login">IamYipi</span></a>
+    <p class="hud-score"><span data-i18n="hud.score">Hi-score</span> <strong id="hud-score">000000</strong></p>
+    <nav class="hud-nav" aria-label="Secciones">
+      <a href="#player" data-i18n="nav.player">Ficha</a>
+      <a href="#skills" data-i18n="nav.skills">Inventario</a>
+      <a href="#worlds" data-i18n="nav.worlds">Mundos</a>
+      <a href="#quests" data-i18n="nav.quests">Open source</a>
+      <a href="#saves" data-i18n="nav.saves">Partidas</a>
+      <a href="#contact" data-i18n="nav.contact">Continuar</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Cambiar idioma a inglés">
+      <span data-l="es">ES</span><span data-l="en">EN</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Title screen -->
+    <section class="title" id="top" aria-labelledby="title-name">
+      <div class="win sprite-frame">
+        <img class="sprite" id="sprite" alt="Avatar de GitHub de Javier Garcia" width="192" height="192"
+             src="https://avatars.githubusercontent.com/u/93437997?s=48&v=4">
+      </div>
+      <button class="sprite-toggle" id="sprite-toggle" type="button" data-i18n="title.hd">Ver en HD</button>
+      <h1 class="title-name" id="title-name">Javier Garcia</h1>
+      <p class="title-class" data-i18n="title.class">Investigador en ciberseguridad e inteligencia artificial</p>
+      <a class="start" href="#player"><span class="cursor" aria-hidden="true">▶</span> <span data-i18n="title.start">Pulsa start</span></a>
+      <p class="title-copy">© 2021–<span id="year-now">2026</span> IamYipi</p>
+    </section>
+
+    <!-- Player sheet -->
+    <section class="screen" id="player" aria-labelledby="player-h">
+      <h2 class="screen-title" id="player-h" data-i18n="player.title">Ficha de jugador</h2>
+      <p class="screen-intro" data-i18n="player.intro"></p>
+
+      <div class="grid-player">
+        <div class="win who">
+          <img class="sprite sprite-sm" alt="" width="96" height="96"
+               src="https://avatars.githubusercontent.com/u/93437997?s=32&v=4">
+          <dl class="who-list">
+            <div><dt data-i18n="player.class">Clase</dt><dd data-i18n="player.classValue"></dd></div>
+            <div><dt data-i18n="player.guild">Gremio</dt><dd id="who-guild"></dd></div>
+            <div><dt data-i18n="player.base">Base</dt><dd id="who-base"></dd></div>
+            <div><dt data-i18n="player.since">En GitHub desde</dt><dd id="who-since"></dd></div>
+          </dl>
+          <a class="btn" id="who-profile" href="https://github.com/IamYipi" data-i18n="player.profile">Ver perfil en GitHub</a>
+        </div>
+
+        <div class="win stats">
+          <dl class="status" id="stats"></dl>
+        </div>
+      </div>
+
+      <div class="win dialog">
+        <p class="dialog-name">Javier</p>
+        <p class="dialog-text" data-i18n="player.bio"></p>
+        <span class="dialog-next" aria-hidden="true">▼</span>
+      </div>
+    </section>
+
+    <!-- Inventory -->
+    <section class="screen" id="skills" aria-labelledby="skills-h">
+      <h2 class="screen-title" id="skills-h" data-i18n="skills.title">Inventario</h2>
+      <p class="screen-intro" data-i18n="skills.intro"></p>
+
+      <div class="grid-skills">
+        <div class="win">
+          <h3 class="win-title" data-i18n="skills.langs">Lenguajes</h3>
+          <ul class="bars" id="bars"></ul>
+          <h4 class="sub" data-i18n="skills.also">También en la mochila</h4>
+          <ul class="chips" id="langs-extra"></ul>
+        </div>
+        <div class="win">
+          <h3 class="win-title" data-i18n="skills.stack">Equipo</h3>
+          <div id="stack"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Worlds -->
+    <section class="screen" id="worlds" aria-labelledby="worlds-h">
+      <h2 class="screen-title" id="worlds-h" data-i18n="worlds.title">Mapa de mundos</h2>
+      <p class="screen-intro" data-i18n="worlds.intro"></p>
+      <div class="worlds" id="worlds-list"></div>
+
+      <div class="grid-carts">
+        <div class="win">
+          <h3 class="win-title" data-i18n="worlds.personal">Cartuchos personales</h3>
+          <p class="win-intro"><strong id="own-private">40</strong> <span data-i18n="worlds.personalIntro"></span></p>
+          <ul class="tally" id="personal"></ul>
+        </div>
+        <div class="win">
+          <h3 class="win-title" data-i18n="worlds.public">Cartuchos públicos</h3>
+          <p class="win-intro" data-i18n="worlds.publicIntro"></p>
+          <ul class="carts" id="public"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open source quests -->
+    <section class="screen quests" id="quests" aria-labelledby="quests-h">
+      <h2 class="screen-title" id="quests-h" data-i18n="quests.title">Diario de misiones open source</h2>
+      <p class="screen-intro" data-i18n="quests.intro"></p>
+
+      <div class="win scoreboard" id="scoreboard"></div>
+      <p class="legend" data-i18n="quests.legend"></p>
+      <ol class="quest-list" id="quest-list"></ol>
+    </section>
+
+    <!-- Saves -->
+    <section class="screen" id="saves" aria-labelledby="saves-h">
+      <h2 class="screen-title" id="saves-h" data-i18n="saves.title">Partidas guardadas</h2>
+      <p class="screen-intro" data-i18n="saves.intro"></p>
+      <ol class="saves" id="timeline"></ol>
+
+      <div class="win heat-win">
+        <h3 class="win-title"><span data-i18n="saves.heat">Últimos 12 meses</span>: <span id="heat-total"></span></h3>
+        <div class="heat-scroll">
+          <div class="heat" id="heat" role="img"></div>
+        </div>
+        <p class="heat-legend"><span data-i18n="saves.less">Menos</span>
+          <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i>
+          <span data-i18n="saves.more">Más</span></p>
+      </div>
+    </section>
+
+    <!-- Continue -->
+    <section class="screen continue" id="contact" aria-labelledby="contact-h">
+      <h2 class="screen-title" id="contact-h" data-i18n="contact.title">¿Continuar?</h2>
+      <p class="screen-intro" data-i18n="contact.intro"></p>
+      <div class="win menu-win">
+        <ul class="menu">
+          <li><a href="https://github.com/IamYipi" data-i18n="contact.github">Sí: ver mi GitHub</a></li>
+          <li><a id="link-bisite" href="https://bisite.usal.es/" data-i18n="contact.bisite">Conocer BISITE</a></li>
+          <li><a href="#top" data-i18n="contact.top">Volver a la pantalla de título</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><span data-i18n="footer.data">Datos generados desde la API de GitHub el</span> <time id="generated"></time>.</p>
+  </footer>
+
+  <noscript><p class="noscript">Esta página necesita JavaScript para pintar los datos de GitHub.</p></noscript>
+
+  <script src="data/github.js"></script>
+  <script src="data/content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
