@@ -13,22 +13,22 @@ window.GH = {
   "url": "https://github.com/IamYipi"
  },
  "totals": {
-  "reposWorked": 74,
+  "reposWorked": 75,
   "ownPublic": 19,
   "ownPrivate": 40,
   "orgRepos": 14,
-  "orgCommits": 6006,
+  "orgCommits": 6015,
   "prsAuthored": 1388,
-  "contributions": 8052,
-  "ossPRs": 43,
+  "contributions": 8059,
+  "ossPRs": 38,
   "ossMerged": 24,
-  "ossRepos": 13,
-  "ossStars": 243592
+  "ossRepos": 12,
+  "ossStars": 243612
  },
  "languages": [
   {
    "name": "Python",
-   "pct": 53.8
+   "pct": 53.9
   },
   {
    "name": "TeX",
@@ -97,11 +97,11 @@ window.GH = {
    6
   ],
   [
-   "C#",
-   5
+   "JavaScript",
+   6
   ],
   [
-   "JavaScript",
+   "C#",
    5
   ],
   [
@@ -160,11 +160,11 @@ window.GH = {
   },
   {
    "year": 2026,
-   "total": 6972
+   "total": 6979
   }
  ],
  "calendar": {
-  "total": 7117,
+  "total": 7124,
   "weeks": [
    [
     [
@@ -2108,7 +2108,7 @@ window.GH = {
     ],
     [
      "2026-10-14",
-     58,
+     65,
      2
     ]
    ]
@@ -2122,7 +2122,7 @@ window.GH = {
   },
   "vigia": {
    "repos": 2,
-   "commits": 1623,
+   "commits": 1632,
    "prs": 367
   },
   "airsiem": {
@@ -2212,8 +2212,7 @@ window.GH = {
     }
    ],
    "merged": 8,
-   "open": 0,
-   "closed": 0
+   "open": 0
   },
   {
    "repo": "paradedb/paradedb",
@@ -2259,13 +2258,12 @@ window.GH = {
     }
    ],
    "merged": 4,
-   "open": 1,
-   "closed": 0
+   "open": 1
   },
   {
    "repo": "seaweedfs/seaweedfs",
    "url": "https://github.com/seaweedfs/seaweedfs",
-   "stars": 35466,
+   "stars": 35468,
    "language": "Go",
    "description": "SeaweedFS is a distributed storage system for object storage (S3), file systems, and Iceberg tables, designed to handle billions of files with O(1) disk access and effortless horizontal scaling.",
    "prs": [
@@ -2292,13 +2290,12 @@ window.GH = {
     }
    ],
    "merged": 3,
-   "open": 0,
-   "closed": 0
+   "open": 0
   },
   {
    "repo": "getmoto/moto",
    "url": "https://github.com/getmoto/moto",
-   "stars": 8702,
+   "stars": 8703,
    "language": "Python",
    "description": "A library that allows you to easily mock out tests based on AWS infrastructure.",
    "prs": [
@@ -2339,8 +2336,7 @@ window.GH = {
     }
    ],
    "merged": 2,
-   "open": 3,
-   "closed": 0
+   "open": 3
   },
   {
    "repo": "boa-dev/boa",
@@ -2379,13 +2375,12 @@ window.GH = {
     }
    ],
    "merged": 2,
-   "open": 2,
-   "closed": 0
+   "open": 2
   },
   {
    "repo": "quickjs-ng/quickjs",
    "url": "https://github.com/quickjs-ng/quickjs",
-   "stars": 3951,
+   "stars": 3952,
    "language": "C",
    "description": "QuickJS, the Next Generation: a mighty JavaScript engine",
    "prs": [
@@ -2419,13 +2414,12 @@ window.GH = {
     }
    ],
    "merged": 2,
-   "open": 2,
-   "closed": 0
+   "open": 2
   },
   {
    "repo": "msitarzewski/agency-agents",
    "url": "https://github.com/msitarzewski/agency-agents",
-   "stars": 159993,
+   "stars": 160009,
    "language": "Shell",
    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
    "prs": [
@@ -2438,8 +2432,7 @@ window.GH = {
     }
    ],
    "merged": 1,
-   "open": 0,
-   "closed": 0
+   "open": 0
   },
   {
    "repo": "aliasrobotics/cai",
@@ -2457,8 +2450,7 @@ window.GH = {
     }
    ],
    "merged": 1,
-   "open": 0,
-   "closed": 0
+   "open": 0
   },
   {
    "repo": "versity/versitygw",
@@ -2483,8 +2475,7 @@ window.GH = {
     }
    ],
    "merged": 1,
-   "open": 1,
-   "closed": 0
+   "open": 1
   },
   {
    "repo": "flashinfer-ai/flashinfer",
@@ -2502,55 +2493,7 @@ window.GH = {
     }
    ],
    "merged": 0,
-   "open": 1,
-   "closed": 0
-  },
-  {
-   "repo": "ministackorg/ministack",
-   "url": "https://github.com/ministackorg/ministack",
-   "stars": 4953,
-   "language": "Python",
-   "description": "Ministack: Free, open-source local AWS emulator - 60+ services, Terraform compatible, real databases. Free forever. MIT   licensed.",
-   "prs": [
-    {
-     "number": 1869,
-     "title": "fix(inspector2): return timestamps and shapes aws-sdk-go-v2 can read",
-     "url": "https://github.com/ministackorg/ministack/pull/1869",
-     "state": "closed",
-     "date": "2026-09-30"
-    },
-    {
-     "number": 1865,
-     "title": "fix(cloudformation): store CodeBuild project settings under API names",
-     "url": "https://github.com/ministackorg/ministack/pull/1865",
-     "state": "closed",
-     "date": "2026-09-30"
-    },
-    {
-     "number": 1864,
-     "title": "fix(events): return the updated bus from UpdateEventBus",
-     "url": "https://github.com/ministackorg/ministack/pull/1864",
-     "state": "closed",
-     "date": "2026-09-30"
-    },
-    {
-     "number": 1863,
-     "title": "fix(mq): return SupportedEngineVersions as strings",
-     "url": "https://github.com/ministackorg/ministack/pull/1863",
-     "state": "closed",
-     "date": "2026-09-30"
-    },
-    {
-     "number": 1862,
-     "title": "fix(rds): list DescribeGlobalClusters items as GlobalClusterMember elements",
-     "url": "https://github.com/ministackorg/ministack/pull/1862",
-     "state": "closed",
-     "date": "2026-09-30"
-    }
-   ],
-   "merged": 0,
-   "open": 0,
-   "closed": 5
+   "open": 1
   },
   {
    "repo": "fsouza/fake-gcs-server",
@@ -2582,8 +2525,7 @@ window.GH = {
     }
    ],
    "merged": 0,
-   "open": 3,
-   "closed": 0
+   "open": 3
   },
   {
    "repo": "webfp/tor-browser-selenium",
@@ -2601,8 +2543,7 @@ window.GH = {
     }
    ],
    "merged": 0,
-   "open": 1,
-   "closed": 0
+   "open": 1
   }
  ],
  "public": [

@@ -147,6 +147,8 @@ def main():
     oss = defaultdict(list)
     for p in prs:
         full = p["repository_url"].split("/repos/", 1)[1]
+        if not p.get("pull_request", {}).get("merged_at") and p["state"] != "open":
+            continue
         if full not in meta:
             m = gh(f"repos/{full}")
             meta[full] = {
@@ -157,7 +159,7 @@ def main():
                 "description": m["description"] or "",
             }
         merged = p.get("pull_request", {}).get("merged_at")
-        state = "merged" if merged else ("open" if p["state"] == "open" else "closed")
+        state = "merged" if merged else "open"
         oss[full].append({
             "number": p["number"],
             "title": p["title"],
@@ -168,7 +170,7 @@ def main():
     oss_list = []
     for full, items in oss.items():
         counts = Counter(i["state"] for i in items)
-        oss_list.append({**meta[full], "prs": items, "merged": counts["merged"], "open": counts["open"], "closed": counts["closed"]})
+        oss_list.append({**meta[full], "prs": items, "merged": counts["merged"], "open": counts["open"]})
     oss_list.sort(key=lambda x: (-x["merged"], -x["stars"]))
 
     # --- public showcase repos (own, non-fork)
@@ -183,7 +185,7 @@ def main():
             "created": r["created_at"][:10],
         }
         for r, _ in worked
-        if r["owner"]["login"] == LOGIN and not r["private"] and r["name"] != LOGIN
+        if r["owner"]["login"] == LOGIN and not r["private"] and r["name"] not in (LOGIN, f"{LOGIN}.github.io")
     ]
     public.sort(key=lambda x: x["updated"], reverse=True)
 

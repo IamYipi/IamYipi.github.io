@@ -137,15 +137,15 @@
     const T = GH.totals;
     const score = (cls, n, key) => h("div", { class: `score ${cls}` }, h("strong", {}, n), h("span", {}, t(key)));
     fill("#scoreboard",
-      score("", fmt(T.ossPRs), "quests.sent"),
       score("", fmt(T.ossMerged), "quests.merged"),
+      score("open", fmt(T.ossPRs - T.ossMerged), "quests.open"),
       score("", fmt(T.ossRepos), "quests.repos"),
       score("stars", `${kfmt(T.ossStars)}★`, "quests.stars"));
 
-    const order = { merged: 0, open: 1, closed: 2 };
+    const order = { merged: 0, open: 1 };
     fill("#quest-list", GH.oss.map((o) => {
       const prs = [...o.prs].sort((a, b) => order[a.state] - order[b.state] || b.date.localeCompare(a.date));
-      const label = `${o.merged} ${t("quests.state.merged")}, ${o.open} ${t("quests.state.open")}, ${o.closed} ${t("quests.state.closed")}`;
+      const label = `${o.merged} ${t("quests.state.merged")}, ${o.open} ${t("quests.state.open")}`;
       return h("li", { class: "win quest" },
         h("div", { class: "quest-head" },
           h("h3", { class: "quest-name" }, h("a", { href: o.url }, o.repo)),
@@ -153,7 +153,7 @@
             h("span", { class: "star" }, `★ ${kfmt(o.stars)}`),
             o.language ? h("span", {}, o.language) : null)),
         o.description ? h("p", { class: "quest-desc" }, o.description) : null,
-        pips([["", o.merged], ["open", o.open], ["closed", o.closed]], label),
+        pips([["", o.merged], ["open", o.open]], label),
         h("ul", { class: "prs" }, prs.map((p) => h("li", { class: p.state },
           h("span", { class: `state ${p.state}` }, t(`quests.state.${p.state}`)),
           h("a", { href: p.url }, p.title, " ", h("span", { class: "num" }, `#${p.number}`))))));
