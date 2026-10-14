@@ -69,8 +69,10 @@ window.CONTENT = {
 
       "contact.title": "¿Continuar?",
       "contact.intro": "Si quieres colaborar en un proyecto de ciberseguridad o IA, empieza por aquí.",
-      "contact.github": "Sí: ver mi GitHub",
-      "contact.bisite": "Conocer BISITE",
+      "contact.email": "Sí, escríbeme",
+      "contact.linkedin": "Conectar en LinkedIn",
+      "contact.github": "Ver mi GitHub",
+      "contact.bisite": "Mi ficha en BISITE",
       "contact.top": "Volver a la pantalla de título",
       "footer.data": "Datos generados desde la API de GitHub el",
       "noscript": "Esta página necesita JavaScript para pintar los datos de GitHub."
@@ -142,8 +144,10 @@ window.CONTENT = {
 
       "contact.title": "Continue?",
       "contact.intro": "If you want to team up on a cybersecurity or AI project, start here.",
-      "contact.github": "Yes: see my GitHub",
-      "contact.bisite": "Meet BISITE",
+      "contact.email": "Yes, email me",
+      "contact.linkedin": "Connect on LinkedIn",
+      "contact.github": "See my GitHub",
+      "contact.bisite": "My BISITE profile",
       "contact.top": "Back to the title screen",
       "footer.data": "Data generated from the GitHub API on",
       "noscript": "This page needs JavaScript to draw the GitHub data."
@@ -220,9 +224,5 @@ window.CONTENT = {
     { year: 2024, es: "Arrancan SecurSentry y VIGIA. Máster en Sistemas Inteligentes con un TFM sobre inteligencia de amenazas.", en: "SecurSentry and VIGIA kick off. Master's in Intelligent Systems with a thesis on threat intelligence." },
     { year: 2025, es: "Asistente de IA para analistas (RAG y QLoRA), SOC virtual y primer PR open source, en CAI.", en: "AI assistant for analysts (RAG and QLoRA), virtual SOC, and a first open-source PR, in CAI." },
     { year: 2026, es: "Doctorado en IA aplicada a ciberseguridad y temporada open source: PRs aceptados en SeaweedFS, ParadeDB, mruby, QuickJS, Boa y moto.", en: "PhD on AI for cybersecurity and an open-source season: PRs merged into SeaweedFS, ParadeDB, mruby, QuickJS, Boa and moto." }
-  ],
-
-  links: {
-    bisite: "https://bisite.usal.es/"
-  }
+  ]
 };

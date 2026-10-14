@@ -186,9 +186,7 @@
   function renderFooter() {
     const el = $("#generated");
     el.dateTime = GH.generatedAt;
-    el.textContent = new Date(`${GH.generatedAt}T12:00:00`).toLocaleDateString(lang === "es" ? "es-ES" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
-    if (C.links?.bisite) $("#link-bisite").href = C.links.bisite;
-  }
+    el.textContent = new Date(`${GH.generatedAt}T12:00:00`).toLocaleDateString(lang === "es" ? "es-ES" : "en-GB", { day: "numeric", month: "long", year: "numeric" });  }
 
   function render() {
     applyI18n();
